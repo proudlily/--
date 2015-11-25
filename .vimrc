@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
@@ -12,9 +12,12 @@ Plugin 'VundleVim/Vundle.vim'
 "语言的插件<language plugin>
 "golang
 Plugin 'fatih/vim-go'
+Plugin 'junegunn/vim-plug'
 Plugin 'Shougo/neocomplete.vim' "实时提示
-Plugin 'Shougo/neosnippet.vim'
-".......................................
+"C语言插件
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+"......................
 "vim-scripts repos
 ""vim-script背景
 Plugin 'fatih/molokai'	
@@ -23,7 +26,8 @@ Plugin 'jstemmer/gotags'
 Plugin 'majutsushi/tagbar'
 "安装目录浏览器 nerdtree
 Plugin 'scrooloose/nerdtree'
-
+"........markdown插件
+Plugin  'plasticboy/vim-markdown.git'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -74,6 +78,14 @@ let g:go_disable_autoinstall = 0
 "neosnippet 插件
 let g:go_snippet_engine = "neosnippet"
 
+".................
+"c LANGUAGE
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_global_ycm_extra_conf = '/home/lily/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+"vim script....
+"markdown插件
+let g:vim_markdown_frontmatter=1
 "...................................
 "vim base设置
 set nu  "显示行号
