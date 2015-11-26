@@ -27,7 +27,10 @@ Plugin 'majutsushi/tagbar'
 "安装目录浏览器 nerdtree
 Plugin 'scrooloose/nerdtree'
 "........markdown插件
-Plugin  'plasticboy/vim-markdown.git'
+
+Plugin  'godlygeek/tabular'
+Plugin  'plasticboy/vim-markdown'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -83,9 +86,11 @@ let g:go_snippet_engine = "neosnippet"
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_global_ycm_extra_conf = '/home/lily/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+
 "vim script....
 "markdown插件
 let g:vim_markdown_frontmatter=1
+
 "...................................
 "vim base设置
 set nu  "显示行号
