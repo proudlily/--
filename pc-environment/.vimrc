@@ -109,7 +109,8 @@ autocmd InsertLeave * se nocul "用浅色高亮当前行
 autocmd InsertEnter * se cul    " 用浅色高亮当前行 
 set showcmd         " 输入的命令显示出来，看的清楚些
 set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离
-set foldenable      " 允许折叠  
+set foldenable      " 允许折叠
+"使用空格键打开或者关闭当前的折叠
 set foldmethod=manual   " 手动折叠  
 " 显示中文帮助
 if version >= 603
@@ -145,3 +146,5 @@ set langmenu=zh_CN.UTF-8
 set helplang=cn
 "字体大小
 set guifont=Monospace\ 13
+"copy
+set clipboard=unnamed

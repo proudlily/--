@@ -41,3 +41,8 @@ linux_pro=$HOME/golang/own/linuxprocess
 script_location=$HOME/work/script
 export linux_pro
 export script_location
+
+#apue.3e
+export C_INCLUDE_PATH=/home/lily/work/C/Advanced_Programming/apue.3e/include 
+export LIBRARY_PATH=/home/lily/work/C/Advanced_Programming/apue.3e/lib
+
