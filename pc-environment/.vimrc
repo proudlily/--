@@ -20,6 +20,12 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 
+"python
+Plugin 'cburroughs/pep8.py'
+Plugin 'vim-scripts/pylint.vim'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'ervandew/supertab'
+
 "......................
 "vim-scripts repos
 ""vim-script背景
