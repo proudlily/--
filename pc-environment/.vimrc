@@ -26,6 +26,10 @@ Plugin 'vim-scripts/pylint.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'ervandew/supertab'
 
+"js
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+
 "......................
 "vim-scripts repos
 ""vim-script背景
@@ -102,6 +106,15 @@ let g:go_snippet_engine = "neosnippet"
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_global_ycm_extra_conf = '/home/lily/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+
+"js
+" set path to js-beautify file
+let g:jsbeautify_file = fnameescape(fnamemodify(expand("<sfile>"), ":h")."$HOME/.vim/bundle/js-beautify/js/lib/beautify.js")
+let g:jsbeautify = {"indent_size": 4, "indent_char": "\t"}
+ 
+" by default
+let g:jsbeautify_engine = "node"
+let g:jsbeautify_engine = "v8"
 
 "vim script....
 "markdown插件
