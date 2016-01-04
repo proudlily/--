@@ -8,11 +8,11 @@ export PATH
 
 #gui
 echo  "开始安装gui"
-sudo zypper install gvim , pidgin , imagewriter , stardict , chromium 
+sudo zypper install gvim  pidgin  imagewriter  stardict  chromium 
 
 #系统库
 echo  "开始安装系统库"
-sudo zypper install CMake , gcc , gcc-c++ , ncurses-devel , python-devel 
+sudo zypper install CMake  gcc  gcc-c++  ncurses-devel  python-devel 
 
 #软件
 echo  "开始安装软件"
@@ -27,4 +27,6 @@ git config user.email "annqlmRRq.com"
 git clone http://github.com/creationix/nvm.git ~/.nvm
 source ~/.nvm/nvm.sh
 
+#配置.vimrc
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
