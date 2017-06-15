@@ -1,11 +1,11 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+"set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+"let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 "...............
@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 "golang
 Plugin 'fatih/vim-go'
 Plugin 'junegunn/vim-plug'
- "实时提示
+"实时提示
 Plugin 'Shougo/neocomplete.vim' 
 
 "C语言插件
@@ -25,11 +25,6 @@ Plugin 'cburroughs/pep8.py'
 Plugin 'vim-scripts/pylint.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'ervandew/supertab'
-
-"js
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
-
 "......................
 "vim-scripts repos
 ""vim-script背景
@@ -41,10 +36,6 @@ Plugin 'majutsushi/tagbar'
 
 "安装目录浏览器 nerdtree
 Plugin 'scrooloose/nerdtree'
-
-"........markdown插件
-Plugin  'godlygeek/tabular'
-Plugin  'plasticboy/vim-markdown'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -105,20 +96,8 @@ let g:go_snippet_engine = "neosnippet"
 "c LANGUAGE
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_global_ycm_extra_conf = '/home/lily/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '$HOME/.ycm_extra_conf.py'
 
-"js
-" set path to js-beautify file
-let g:jsbeautify_file = fnameescape(fnamemodify(expand("<sfile>"), ":h")."$HOME/.vim/bundle/js-beautify/js/lib/beautify.js")
-let g:jsbeautify = {"indent_size": 4, "indent_char": "\t"}
- 
-" by default
-let g:jsbeautify_engine = "node"
-let g:jsbeautify_engine = "v8"
-
-"vim script....
-"markdown插件
-let g:vim_markdown_frontmatter=1
 
 "...................................
 "vim base设置
@@ -129,6 +108,8 @@ autocmd InsertEnter * se cul    " 用浅色高亮当前行
 set showcmd         " 输入的命令显示出来，看的清楚些
 set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离
 set foldenable      " 允许折叠
+set foldmethod =syntax "允许语法高亮折叠
+set foldlevelstart=99 "打开文件默认是不折叠的
 "使用空格键打开或者关闭当前的折叠
 set foldmethod=manual   " 手动折叠  
 " 显示中文帮助
